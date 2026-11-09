@@ -1,0 +1,55 @@
+@font-face{font-family:LaunchSans;src:url("assets/fonts/NotoSansJP-LP.woff2?v=20103c4e1db0") format("woff2");font-weight:100 900;font-display:swap}
+:root{color-scheme:light;--ink:#191919;--paper:#fff;--line:#06c755;--red:#991b24;--gold:#d6b65a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:LaunchSans,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif;font-size:19px;font-weight:600;line-height:1.9;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.page{width:min(100%,900px);margin:0 auto;padding:0 50px 35px}
+img{display:block;width:100%;height:auto}
+.hero{margin:0}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.cta{margin:23px 0 37px;text-align:center}
+.cta-caption{margin:0 0 13px;line-height:1.6;font-size:19px;font-weight:800}
+.cta-caption:before,.cta-caption:after{content:"";display:inline-block;width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:7px solid #c42a68;vertical-align:middle;margin:0 12px}
+.line-button{display:flex;align-items:center;justify-content:center;gap:26px;width:100%;min-height:94px;aspect-ratio:1597/392;padding:14px 22px;border:5px solid #fff;border-radius:999px;background:linear-gradient(#08db57 0%,#00bc3e 55%,#04c54d 100%);box-shadow:0 0 0 4px #06c755,0 4px 7px 5px #06c7553b;color:#fff;font:800 clamp(22px,3.4vw,43px)/1.2 LaunchSans,Meiryo,sans-serif;text-align:center;cursor:pointer;text-shadow:0 1px 1px #128236}
+.line-button:hover{background:#00b947}
+.line-button:active{background:#009e3c;box-shadow:0 0 0 4px #06c755,0 2px 4px 3px #06c7553b}
+.line-word{flex:none;font-size:.62em;font-weight:900;letter-spacing:-.02em;line-height:1;display:grid;place-items:center;width:2.55em;aspect-ratio:1;padding:.45em .2em;border:2px solid #fff;border-radius:19%;background:#fff;color:#00b947;text-shadow:none}
+button:focus-visible{outline:3px solid #164fe0;outline-offset:10px}
+.mobile-break{display:none}
+.story,.consult{text-align:center}
+h2{font-size:31px;line-height:1.65;font-weight:900;margin:54px 0 26px;letter-spacing:.015em}
+p{margin:28px 0}
+.story p{font-size:21px;line-height:2.1}
+.story strong{font-weight:900}
+figure{margin:31px 0}
+.owner-photo{max-width:690px;margin-inline:auto}
+.revenue{margin-top:36px}
+figcaption{font-size:14px;line-height:1.6;font-weight:400;margin-top:8px;color:#525252}
+.consult{padding-top:5px}
+.questions{margin:27px 0 38px;font-size:23px;font-weight:900;line-height:1.8}
+.questions p{margin:24px 0}
+.closing{font-weight:900;margin-top:42px}
+.last-cta{margin-top:40px;margin-bottom:28px}
+.notice{width:min(90vw,440px);padding:28px 25px;border:0;border-radius:9px;color:#191919;text-align:center;box-shadow:0 14px 60px #0004;font-size:17px}
+.notice::backdrop{background:#0008}
+.notice h2{font-size:24px;margin:0}
+.notice p{margin:18px 0;line-height:1.8}
+.close-notice{border:0;border-radius:5px;background:#222;color:white;padding:10px 35px;font:inherit;font-size:17px;font-weight:700;line-height:1.4;cursor:pointer}
+@media(max-width:600px){
+  body{font-size:17px;line-height:1.95}
+  .page{padding:0 15px 24px}
+  .cta{margin:18px 4px 31px}
+  .cta-caption{font-size:16px;line-height:1.65;margin-bottom:11px}
+  .cta-caption:before,.cta-caption:after{margin:0 7px;border-left-width:4px;border-right-width:4px;border-top-width:6px}
+  .line-button{gap:14px;min-height:0;padding:10px 14px;border-width:3px;font-size:clamp(21px,5.7vw,28px);box-shadow:0 0 0 3px #06c755,0 3px 6px 3px #06c7553b}
+  .line-word{font-size:.65em;border-width:1px}
+  h2{font-size:24px;margin:39px 0 24px;line-height:1.7}
+  .story p{font-size:18px;line-height:2.1;margin:27px 0}
+  figure{margin:27px 0}
+  figcaption{font-size:13px}
+  .questions{font-size:19px;line-height:1.9;margin:24px 0 31px}
+  .questions p{margin:22px 0}
+  .closing{margin-top:34px}
+  .last-cta{margin-top:33px}
+}
+@media(max-width:360px){.mobile-break{display:inline}.cta-caption:before,.cta-caption:after{display:none}.line-button{gap:11px;font-size:20px}.story p{font-size:17px}h2{font-size:22px}.questions{font-size:18px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}

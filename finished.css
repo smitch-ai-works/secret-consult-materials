@@ -1,0 +1,619 @@
+/* 提出する画面は、LPそのものと各特典の一枚見本。 */
+body.sales-page,body.library-page{margin:0;color:#233c47;background:#f4f2eb;font-family:"Yu Gothic",Meiryo,sans-serif}
+.deliver-nav{display:flex;justify-content:center;gap:34px;padding:24px;font-size:13px}
+.deliver-nav a{color:#68522c;text-underline-offset:6px}
+.sales-hero{background:linear-gradient(#07111a22,#07111a88),url('assets/C背景.png') center/cover;color:#fff8e7;text-align:center;padding:62px 25px 58px}
+.sales-proof{font-size:clamp(19px,3vw,29px);font-weight:700;margin:0 0 24px}
+.sales-sub{font:700 clamp(18px,3vw,28px)/1.7 "Yu Mincho",serif;color:#f5d789}
+.sales-hero h1{font:800 clamp(52px,7vw,94px)/1.3 "Yu Mincho",serif;color:#ffe687;text-shadow:0 0 23px #e6ab52a6;margin:26px 0 24px}
+.sales-hero h1 span{font-size:.58em;display:block;margin-top:12px}
+.sales-free{display:inline-block;padding:6px 30px;border:1px solid #d1ad62;font-weight:700;color:#fbe8b7}
+.sales-letter{max-width:880px;margin:auto;background:#fffdf6}
+.sales-section{padding:57px 68px;border-bottom:1px solid #e2d9c3}
+.sales-section h2{font:700 32px/1.65 "Yu Mincho",serif;margin:0 0 24px;overflow-wrap:anywhere}
+.sales-section>p{font-size:18px;line-height:2.1;margin:0}
+.sales-section.dark{background:#132833;color:#fff6e7;border-color:#28414a}
+.sales-section.dark h2{color:#f2d48b}
+.sales-section.gold{background:#f0e7cf}
+.sales-result{margin:35px 0 24px;text-align:center;border-block:1px solid #cdb478;padding:20px 0}
+.sales-result>span{display:block;font-size:15px;color:#78633c}
+.sales-result strong{display:block;font:700 96px/1.2 Georgia,serif;color:#9b742a;margin-top:8px}
+.sales-result small{font:700 28px "Yu Mincho",serif;margin-left:10px}
+.sales-record{display:grid;gap:17px;max-width:500px;margin:20px auto}
+.sales-record>div{display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:15px}
+.sales-record b{text-align:right}
+.sales-record i{grid-column:1/3;display:block;height:5px;min-width:3px;width:var(--amount);background:#bb924b}
+.sales-section .sales-date{font-size:12px;color:#7f7968;margin-top:27px;text-align:center}
+.sales-concerns,.sales-questions{list-style:none;padding:0;margin:27px 0 0;display:grid;gap:12px}
+.sales-concerns li{padding:17px 20px;background:#fffcf4;border-left:3px solid #a88b4f;font-size:17px;font-weight:700}
+.sales-loop{display:flex;gap:15px;justify-content:center;margin-top:25px;color:#e7c77e}
+.sales-loop span{padding:8px 15px;border:1px solid #baa16977;font-size:15px}
+.sales-compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:30px}
+.sales-compare>div{background:#fcf9f0;border:1px solid #cdbf9f;padding:23px 19px}
+.sales-compare>div+div{background:#e2e9dc;border-color:#acbb9f}
+.sales-compare small{display:block;font-size:13px;color:#687157}
+.sales-compare b{display:block;font-size:17px;line-height:1.7;margin-top:12px}
+.sales-profile{display:flex;align-items:center;gap:23px;margin-top:28px}
+.sales-profile img{width:88px;height:88px;object-fit:cover;border-radius:50%}
+.sales-profile p{font-size:16px;font-weight:700;line-height:1.8}
+.sales-questions li{padding:15px 0;border-top:1px solid #aa945f66;color:#f2d699;font-size:20px;font-weight:700}
+.sales-voice{padding:24px 27px;background:#f5f0e2;border-left:3px solid #baa06a;font-size:17px;line-height:1.9;margin:22px 0 0}
+.sales-cta{margin-top:32px;text-align:center}
+.sales-cta p{font-size:13px;margin:0 0 14px}
+.sales-cta button{display:block;width:100%;border:1px solid #e6ca83;border-radius:2px;background:linear-gradient(110deg,#f9e5a1,#c79a3e);color:#251b0b;padding:23px 15px;font-size:19px;font-weight:700;cursor:pointer}
+.sales-cta button:focus-visible{outline:3px solid #876225;outline-offset:4px}
+.benefit-intro{background:linear-gradient(#07111a55,#07111a88),url('assets/C背景.png') center/cover;color:#ffe4a0;text-align:center;padding:42px 20px 48px}
+.benefit-intro>p{font-size:16px;color:#fff2ce;margin:0 0 15px}
+.benefit-intro h1{font:700 40px/1.3 "Yu Mincho",serif;margin:0}
+.benefit-intro h1 span{display:block;font-size:66px;margin-top:7px}
+.finished-grid{max-width:1280px;margin:15px auto 60px;padding:0 30px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:42px 28px}
+.finished-card{background:#fffdf7;border:1px solid #dbcfb7;min-width:0;box-shadow:0 7px 25px #1c2f3810}
+.finished-heading{display:flex;align-items:center;gap:18px;padding:23px 24px;min-height:130px}
+.finished-heading>span{font:700 35px Georgia,serif;color:#a17b34;flex:none}
+.finished-heading p{font-size:11px;color:#87714a;line-height:1.5;margin:0 0 8px}
+.finished-heading h2{font:700 20px/1.6 "Yu Mincho",serif;margin:0}
+.sheet-open{display:block;border-block:1px solid #e3d8c3}
+.sheet-open img{width:100%;height:auto;display:block}
+.finished-caption{font-size:14px;line-height:1.8;padding:20px 24px 0;margin:0}
+.finished-link{display:inline-block;margin:16px 24px 22px;color:#8c662b;font-size:13px;text-underline-offset:5px}
+.single-sheet{max-width:1080px;margin:10px auto 45px;padding:0 22px}
+.single-sheet header{padding:15px 0 30px}
+.single-sheet header p{font-size:13px;color:#8a7145;margin:0 0 10px}
+.single-sheet h1{font:700 29px/1.6 "Yu Mincho",serif;margin:0}
+.single-sheet img{display:block;width:100%;height:auto;border:1px solid #d8c9aa}
+.single-actions{display:flex;justify-content:space-between;gap:20px;padding:23px 0;font-size:14px}
+.single-actions a{color:#795b2b}
+.submission-home{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:50px 30px;text-align:center;background:linear-gradient(#07111a33,#07111a99),url('assets/C背景.png') center/cover;color:#f7dda1}
+.submission-home>p{font-size:20px}
+.submission-home h1{font:700 clamp(32px,5vw,62px)/1.6 "Yu Mincho",serif;margin:25px 0 40px}
+.submission-links{display:flex;justify-content:center;gap:22px}
+.submission-links a{display:block;min-width:250px;padding:23px;color:#fbe2ab;border:1px solid #ab8a4d;background:#0d2028aa;text-decoration:none}
+.submission-links span{display:block;font-size:13px;margin-bottom:10px}
+.submission-links strong{font-size:23px}
+body.sheet-page{margin:0;padding:0;background:#fff;font-family:"Yu Gothic",Meiryo,sans-serif;color:#243e49}
+.sheet{box-sizing:border-box;position:relative;width:1080px;height:1440px;overflow:hidden;background:#fffdf6;display:grid;grid-template-rows:320px 62px 1fr 300px 108px}
+.sheet-head{padding:33px 42px;display:flex;align-items:center;gap:27px;background:linear-gradient(#08182466,#081824a3),url('assets/C背景.png') center/cover;color:#fff4d4}
+.sheet-head>div{min-width:0}
+.sheet-number{font:700 80px/1 Georgia,serif;color:#e7c67b;min-width:110px;border-right:1px solid #b29a6277;padding-right:23px}
+.sheet-kind{font-size:21px;color:#e1c489;margin:0 0 12px;line-height:1.5}
+.sheet-head h1{font:700 47px/1.42 "Yu Mincho",serif;margin:0;color:#ffe8ad}
+.sheet-lead{font-size:23px;line-height:1.6;margin:16px 0 0;color:#fff6df}
+.sheet-topics{display:flex;align-items:center;justify-content:space-evenly;padding:0 25px;background:#eadfbe;font-size:21px;font-weight:700;color:#6b542d}
+.sheet-topics span+span{border-left:1px solid #b7a173;padding-left:28px}
+.sheet-main{min-height:0;padding:27px 44px;display:flex;flex-direction:column;justify-content:center}
+.sheet-main h2,.sheet-example h2{font:700 28px/1.55 "Yu Mincho",serif;margin:0 0 17px}
+.sheet-main .diagram{padding:25px 28px;margin:0;min-height:340px;display:flex;flex-direction:column;justify-content:center;background:#f3f0e5}
+.sheet-main .figure-note{font-size:17px}
+.sheet-main .actor strong{font-size:25px}
+.sheet-main .actor>span{font-size:19px}
+.sheet-main .actor .object{width:120px;height:120px}
+.sheet-main .flow-arrow small{font-size:16px}
+.sheet-main .paper-example{max-width:none}
+.sheet-main .calendar-row strong{font-size:22px}
+.sheet-main .calendar-row p{font-size:18px}
+.sheet-main .calendar-title>b{font-size:23px}
+.sheet-main .stair>span{font-size:21px}
+.sheet-main .stair>small{font-size:15px}
+.sheet-main .pipeline-stage p{font-size:18px}
+.sheet-main .zoom-close p{font-size:18px}
+.sheet-main .ratio-sheet>p{font-size:21px}
+.sheet-main .ratio-answer{font-size:22px}
+.sheet-main .ratio-answer span{font-size:17px}
+.sheet-example{padding:25px 44px;background:#eef0e6;border-top:1px solid #d9dccb;min-height:0}
+.sheet-example h2{font-size:26px;margin-bottom:14px}
+.sheet-fields{margin:0;display:grid;gap:0}
+.sheet-fields>div{display:grid;grid-template-columns:185px 1fr;gap:20px;padding:13px 0;border-top:1px solid #cbd1bd;align-items:start}
+.sheet-fields dt{font-size:19px;font-weight:700;color:#72805d;line-height:1.6}
+.sheet-fields dd{font-size:23px;line-height:1.6;margin:0}
+.sheet-foot{padding:23px 44px;background:#17333f;color:#fff3cd;display:flex;gap:27px;align-items:center}
+.sheet-foot>span{font-size:17px;color:#d4b873;white-space:nowrap}
+.sheet-foot strong{font-size:23px;line-height:1.6}
+.sheet-08{grid-template-rows:320px 62px 1fr 350px 108px}
+.prompt-sample{background:#fffdf6;border-left:4px solid #b29960;font-size:23px;line-height:1.7;padding:20px 24px}
+.consult-visual{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:35px 10px}
+.consult-visual>.object{width:140px;height:140px;flex:none}
+.consult-points{flex:1;display:grid;gap:20px}
+.consult-points>div{padding:17px 22px;background:#fffaf0;border-left:3px solid #b7954f}
+.consult-points b{font-size:30px;display:block;color:#94702e}
+.consult-points span{font-size:21px;display:block;margin-top:6px}
+.money-preview{position:relative;width:880px;max-width:100%;height:450px;margin:auto}
+.money-lines{position:absolute;inset:0;width:100%;height:100%}
+.money-role{position:absolute;width:200px;text-align:center}
+.money-role .object{width:100px;height:100px;margin:0 auto 10px}
+.money-role b{font-size:26px;display:block;line-height:1.5}
+.money-role.buyer{left:18px;top:4px}
+.money-role.seller{right:18px;top:4px}
+.money-role.referrer{left:340px;bottom:4px}
+.money-label{position:absolute;font-size:21px;line-height:1.6;background:#f3f0e5;padding:4px 10px}
+.money-label.price{left:372px;top:28px;color:#8c6a2e}
+.money-label.reward{right:14px;top:235px;color:#8c6a2e}
+.money-label.referral{left:70px;top:243px;color:#41636c}
+.sheet-10 .diagram{padding:20px 28px}
+.sheet-10 .ratio-sheet{padding:18px}
+.sheet-10 .ratio-sheet>b{font-size:32px;margin-top:0}
+.sheet-10 .ratio-sheet>p{margin:8px 0;font-size:21px}
+.sheet-10 .dots{max-width:160px;margin:12px auto 0;gap:4px}
+.sheet-10 .ratio-sheet>strong{font-size:38px;margin-top:10px}
+.sheet-10 .ratio-answer{margin-top:15px;gap:6px 16px}
+.sheet-10 .figure-note{font-size:15px;margin-top:12px}
+@media(max-width:700px){.sales-hero{padding:39px 18px 35px}.sales-proof{font-size:19px;margin-bottom:20px}.sales-sub{font-size:17px}.sales-hero h1{font-size:53px;margin:25px 0}.sales-hero h1 span{font-size:28px}.sales-section{padding:35px 24px}.sales-section h2{font-size:25px;line-height:1.65;margin-bottom:20px}.sales-section>p{font-size:16px;line-height:2.05}.sales-result strong{font-size:80px}.sales-concerns li{font-size:15px;padding:15px 14px}.sales-compare{grid-template-columns:1fr}.sales-compare>div{padding:18px}.sales-compare b{font-size:16px;margin-top:8px}.sales-questions li{font-size:17px}.sales-profile{gap:17px}.sales-profile p{font-size:14px}.sales-profile img{width:70px;height:70px}.sales-voice{font-size:15px;padding:20px}.sales-cta button{font-size:17px;padding:20px 10px}.sales-loop{gap:9px}.sales-loop span{font-size:13px;padding:8px 11px}.benefit-intro{padding:33px 20px}.benefit-intro h1{font-size:31px}.benefit-intro h1 span{font-size:53px}.finished-grid{grid-template-columns:1fr;padding:0 16px;gap:28px;margin-top:0}.finished-heading{min-height:0;padding:20px;gap:15px}.finished-heading h2{font-size:19px}.finished-heading>span{font-size:32px}.finished-caption{font-size:13px;padding:17px 20px 0}.finished-link{margin:14px 20px 20px}.single-sheet{padding:0 16px}.single-sheet h1{font-size:23px}.single-actions{font-size:13px}.deliver-nav{font-size:12px;gap:28px;padding:22px 16px}.submission-links{flex-direction:column;gap:16px}.submission-home{padding:35px 22px}.submission-home>p{font-size:16px}.submission-links a{min-width:0}}
+@media(max-width:359px){.sales-hero h1{font-size:48px}.sales-hero h1 span{font-size:25px}.sales-section{padding:31px 21px}.sales-section h2{font-size:23px}.sales-result strong{font-size:70px}.sales-section .sales-date{font-size:11px}.finished-heading h2{font-size:17px}}
+.sales-diagram{box-sizing:border-box;position:relative;margin:30px 0 0;padding:25px;background:#f5f0e1;border:1px solid #d8c8a1;color:#29434f}
+.sales-diagram .object{width:76px;height:76px;flex:none}
+.growth-context{display:flex;align-items:center;justify-content:space-between;gap:14px;font-size:13px;color:#81704a;margin-bottom:16px}
+.growth-context strong{font-size:16px;color:#75602e}
+.growth-chart{display:block;width:100%;height:auto}
+.growth-labels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;text-align:center;margin-top:9px}
+.growth-labels span{display:block;font-size:12px;color:#85764f;margin-bottom:5px}
+.growth-labels b{display:block;font:700 19px/1.5 Georgia,"Yu Mincho",serif;white-space:nowrap}
+.sales-section.dark .loop-diagram{padding:0;background:#203b47;color:#fff2ca;border-color:#b79a5d66;height:240px}
+.loop-connections{position:absolute;inset:0;width:100%;height:100%}
+.loop-nodes{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding-top:18px;text-align:center}
+.loop-nodes>div{min-width:0;display:flex;flex-direction:column;align-items:center;padding:0 7px}
+.loop-nodes .object{padding:8px;background:#f8efd9;border-radius:50%;margin-bottom:10px}
+.loop-nodes strong{font-size:20px;line-height:1.5}
+.loop-nodes span{display:block;font-size:12px;color:#c8d5d3;line-height:1.6;margin-top:5px;max-width:12em}
+.cause-diagram{padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;border:0;background:none}
+.cause-side{padding:24px 19px;background:#f3efe4;border:1px solid #d8cdb8;min-width:0;text-align:center}
+.cause-side h3{font:700 20px/1.5 "Yu Mincho",serif;margin:0 0 23px}
+.knowledge-pieces{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:31px}
+.knowledge-pieces>div{min-width:0}
+.knowledge-pieces .object{width:100%;max-width:55px;height:auto;margin:auto}
+.knowledge-pieces span{display:block;font-size:13px;margin-top:8px}
+.cause-side>p{font-size:14px;line-height:1.9;margin:25px 0 0;color:#81765f}
+.cause-side.connected{background:#e8eddf;border-color:#b4c09e}
+.connected-steps{list-style:none;padding:0;margin:0;display:grid;gap:14px;text-align:left}
+.connected-steps li{position:relative;display:flex;align-items:center;gap:10px;padding:11px;background:#fcfff6;font-size:16px;font-weight:700;line-height:1.55}
+.connected-steps li+li:before{content:"";position:absolute;top:-14px;left:24px;width:2px;height:14px;background:#9ba580}
+.connected-steps li>span{display:grid;place-items:center;flex:none;border-radius:50%;width:26px;height:26px;background:#a4b18a;color:#fff;font:700 16px Georgia,serif}
+.division-diagram{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 34px;background:#f8f4e8}
+.division-side{min-width:0;text-align:center}
+.division-person .object{margin:0 auto 9px;width:84px;height:84px}
+.division-person h3{font:700 20px/1.5 "Yu Mincho",serif;margin:0 0 17px}
+.division-side ul{list-style:none;padding:0;margin:0;display:grid;gap:9px}
+.division-side li{padding:12px 5px;background:#fffdf6;border-bottom:2px solid #c8b078;font-size:15px;line-height:1.65}
+.division-side.ai li{background:#e4ebdf;border-color:#a9b898}
+.division-plus{position:absolute;left:50%;top:60px;transform:translateX(-50%);font-size:28px;color:#a68a4e}
+.division-diagram figcaption{grid-column:1/3;text-align:center;border-top:1px solid #d7cbae;padding-top:18px;font-size:15px;font-weight:700}
+.consult-diagram{background:#fffaf0;padding:26px 28px}
+.consult-inputs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.consult-inputs span{display:flex;align-items:center;justify-content:center;min-height:48px;padding:8px;border:1px solid #cdb678;background:#f3e8c8;font-size:15px;font-weight:700;text-align:center;line-height:1.5}
+.consult-lines{display:block;width:100%;height:67px}
+.consult-question{position:relative;display:flex;align-items:center;justify-content:center;gap:24px;padding:21px 17px;background:#153440;color:#ffedbb;border:1px solid #ccac64}
+.consult-question .object{width:72px;height:72px;background:#fbf2dc;border-radius:50%;padding:8px}
+.consult-question strong{font:700 28px/1.6 "Yu Mincho",serif}
+.consult-outputs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:22px}
+.consult-outputs span{padding:6px 12px;border-bottom:1px solid #cbb57a;font-size:14px}
+@media(max-width:700px){.sales-diagram{padding:18px 16px;margin-top:25px}.growth-context{display:block;font-size:11px;margin-bottom:11px}.growth-context strong{font-size:14px;display:block;margin-top:4px}.growth-labels b{font-size:14px}.growth-labels span{font-size:11px}.sales-section.dark .loop-diagram{height:194px}.loop-nodes{padding-top:13px}.loop-nodes>div{padding-inline:4px}.loop-nodes .object{width:57px;height:57px;padding:7px;margin-bottom:7px}.loop-nodes strong{font-size:15px}.loop-nodes span{font-size:11px;max-width:7em}.cause-diagram{padding:0;gap:12px}.cause-side{padding:17px 12px}.cause-side h3{font-size:16px;margin-bottom:17px}.knowledge-pieces{gap:5px;margin-top:24px}.knowledge-pieces span{font-size:11px}.cause-side>p{font-size:12px;margin-top:20px}.connected-steps{gap:12px}.connected-steps li{font-size:12px;padding:10px 6px;gap:6px}.connected-steps li>span{width:20px;height:20px;font-size:13px}.connected-steps li+li:before{left:16px;top:-12px;height:12px}.division-diagram{gap:20px 18px}.division-person .object{width:62px;height:62px}.division-person h3{font-size:14px;margin-bottom:13px}.division-side li{font-size:13px;padding:10px 3px}.division-plus{font-size:24px;top:47px}.division-diagram figcaption{font-size:13px;padding-top:13px}.consult-inputs{gap:6px}.consult-inputs span{font-size:12px;padding:7px 3px;min-height:47px}.consult-lines{height:49px}.consult-question{gap:12px;padding:18px 12px}.consult-question .object{width:47px;height:47px;padding:6px}.consult-question strong{font-size:20px}.consult-outputs{gap:7px;margin-top:18px}.consult-outputs span{font-size:12px;padding:5px 7px}}
+@media(max-width:359px){.cause-diagram{grid-template-columns:1fr}.knowledge-pieces{margin-top:15px}.knowledge-pieces .object{max-width:46px}.cause-side>p{margin-top:15px}.cause-side h3{font-size:17px}.connected-steps li{font-size:14px}.division-person h3{font-size:13px}.division-side li{font-size:12px}.consult-question strong{font-size:19px}}
+.sales-section h2{text-wrap:balance}
+/* 今回のLP：本人実績を起点に、中央の短い文章と証拠を順に見せる。 */
+body.sales-page{background:#05070b;color:#f8f3e7}
+.sales-page .sales-letter{max-width:800px;background:#0c121a;box-shadow:0 0 0 1px #b6965038}
+.sales-page .sales-section{padding:56px 48px;text-align:center;border-color:#b6965038}
+.sales-page .sales-section h2{color:#f5d78f;font-size:32px;line-height:1.7;letter-spacing:.015em}
+.sales-page .sales-section.dark{background:linear-gradient(140deg,#190d13,#0d1722);color:#fff7e9}
+.sales-page .sales-section.gold{background:linear-gradient(145deg,#211b13,#11161b);color:#fff7e9}
+.sales-copy{max-width:35em;margin:0 auto;text-align:center}
+.sales-copy p{margin:0;font-size:18px;line-height:2.1;overflow-wrap:anywhere;text-wrap:pretty}
+.sales-copy p+p{margin-top:27px}
+.owner-proof{display:flex;justify-content:center;align-items:center;gap:25px;margin:33px auto 0;padding:25px 12px;border-block:1px solid #c7a65488}
+.owner-proof>img{display:block;width:96px;height:96px;border-radius:50%;object-fit:cover;border:1px solid #b99b5a}
+.owner-proof figcaption{min-width:0;text-align:center}
+.owner-proof figcaption>span{display:block;font-size:13px;line-height:1.7;color:#e6d2a1}
+.owner-proof strong{display:block;font:700 clamp(64px,8vw,94px)/1.2 Georgia,serif;color:#ffe08a;text-shadow:0 0 20px #c8923438}
+.owner-proof small{font:700 24px/1.5 "Yu Mincho",serif;margin-left:6px}
+.owner-income{margin:32px auto 0;max-width:640px}
+.owner-income img{display:block;width:100%;height:auto}
+.sales-voice-cards{display:grid;gap:28px;margin-top:30px}
+.sales-voice-card{width:100%;max-width:640px;margin:0 auto}
+.sales-voice-card a,.sales-voice-card img{display:block;width:100%}
+.sales-voice-card img{height:auto}
+.sales-page .sales-result{border-color:#d3b26b88}
+.sales-page .sales-result>span,.sales-page .sales-section .sales-date{color:#e2cb99}
+.sales-page .sales-result strong{color:#ffe08a}
+.sales-page .sales-concerns li{background:#17212a;border-color:#e0ba68;color:#fff1cf}
+.sales-page .sales-voice{background:#f8f3e7;color:#273b44;text-align:left}
+.sales-page .sales-cta p{color:#ecdbb2}
+.sales-page .sales-cta button{box-shadow:0 0 28px #d8a54230;font-weight:800}
+@media(max-width:700px){.sales-page .sales-section{padding:38px 22px}.sales-page .sales-section h2{font-size:25px;line-height:1.7}.sales-copy p{font-size:16px;line-height:2.05}.sales-copy p+p{margin-top:23px}.owner-proof{gap:15px;padding:21px 0}.owner-proof>img{width:72px;height:72px}.owner-proof figcaption>span{font-size:11px}.owner-proof strong{font-size:68px}.owner-proof small{font-size:20px}}
+@media(max-width:359px){.sales-page .sales-section{padding:33px 18px}.sales-page .sales-section h2{font-size:23px}.sales-copy p{font-size:15px}.owner-proof{gap:10px}.owner-proof>img{width:56px;height:56px}.owner-proof strong{font-size:60px}.owner-proof small{font-size:18px}}
+.sales-page .sales-voices{padding-inline:30px}
+.line-shot-gallery{display:grid;gap:16px;margin-top:30px}
+.line-shot-collage{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:10px;background:#fff;align-items:start}
+.line-shot{margin:0;min-width:0;align-self:start}
+.line-shot.is-wide{grid-column:1/-1}
+.line-shot button{display:block;width:100%;padding:0;margin:0;border:0;background:transparent;cursor:zoom-in}
+.line-shot img{display:block;width:100%;height:auto}
+.line-shot button:focus-visible,.voice-image-dialog button:focus-visible{outline:3px solid #bd9d59;outline-offset:3px}
+.voice-dialog{box-sizing:border-box;width:calc(100vw - 24px);max-width:1100px;max-height:90vh;margin:auto;padding:18px;border:1px solid #bd9d59;background:#fffdf6;color:#233c47;text-align:left;overflow:auto}
+.voice-dialog::backdrop{background:#000c}
+.voice-dialog>header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px;font-size:14px}
+.voice-image-actions{display:flex;gap:8px}
+.voice-image-actions button{font:inherit;font-size:13px;padding:9px 12px;border:1px solid #c9b687;background:#f2ead7;color:#574522;cursor:pointer}
+.voice-image-scroll{max-height:70vh;max-width:100%;overflow:auto;overscroll-behavior:contain;background:#eee}
+.voice-image-scroll img{display:block;width:var(--shot-width);max-width:none;height:auto}
+.voice-image-dialog.is-fit .voice-image-scroll img{width:100%;max-width:100%}
+.voice-image-hint{margin:10px 0 0;font-size:12px;color:#65665f}
+.voice-image-dialog.is-fit .voice-image-hint{visibility:hidden}
+@media(max-width:700px){.sales-page .sales-voices{padding-inline:14px}.line-shot-gallery{gap:12px}.line-shot-collage{gap:6px;padding:6px}.voice-dialog{padding:12px}.voice-image-actions button{padding:8px;font-size:12px}.voice-dialog>header{font-size:13px}.growth-labels b{font-size:13px}}
+@media(max-width:359px){.growth-labels b{font-size:12px}}
+.sales-page .sales-result strong{font-size:clamp(36px,7.5vw,76px);white-space:nowrap}
+.sales-page .sales-result small{font-size:.42em;margin-left:5px}
+
+
+@media print{.deliver-nav,.single-actions,.sales-cta,.toast{display:none!important}.sheet{break-after:page;print-color-adjust:exact}.sales-diagram{break-inside:avoid;print-color-adjust:exact}}
+
+/* 原文の画素を使った、短い幅の感想抜粋。 */
+.line-shot-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
+.line-shot-gallery>.line-shot:last-child:nth-child(odd){grid-column:1/-1;width:calc((100% - 14px)/2);margin-inline:auto}
+.voice-source-note{font-size:12px;color:#d1c2a3;margin:14px 0 0}
+.voice-image-dialog{max-width:550px}
+.voice-image-scroll img{width:100%;max-width:460px;height:auto;margin:auto}
+.owner-growth{max-width:640px;margin:24px auto 0;padding:22px 8px;border-block:1px solid #bd9d5977}
+.owner-growth>p{font-size:16px;line-height:1.9;margin:0 0 15px}
+.owner-growth>p strong{display:block;font-size:36px;color:#ffe08a;line-height:1.5}
+.owner-growth>div{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.owner-growth span{font-size:13px;color:#e6d2a1}
+.owner-growth b{display:block;font-size:28px;line-height:1.6;color:#fff5d9;white-space:nowrap}
+@media(max-width:700px){.line-shot-gallery{gap:10px}.line-shot-gallery>.line-shot:last-child:nth-child(odd){width:calc((100% - 10px)/2)}.owner-growth b{font-size:22px}.owner-growth>p{font-size:14px}}
+@media(max-width:359px){.owner-growth b{font-size:19px}}
+
+.additional-voices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px;text-align:left}
+.additional-voices blockquote{margin:0;padding:22px;background:#fffdf5;border-left:3px solid #b79b60;color:#263c45}
+.additional-voices p{margin:0;font-size:16px;line-height:1.85;overflow-wrap:anywhere}
+.sales-final-action{padding:28px 24px 40px;border-top:1px solid #bd9d5944}
+.sales-final-action .sales-cta{margin:0}
+@media(max-width:480px){.line-shot-gallery{grid-template-columns:1fr;max-width:340px;margin-inline:auto}.line-shot-gallery>.line-shot:last-child:nth-child(odd){grid-column:auto;width:100%}.additional-voices{grid-template-columns:1fr;max-width:340px;margin-inline:auto}.additional-voices p{font-size:16px}.additional-voices blockquote{padding:19px}}
+
+/* 収益の数値は図と本文で同じ数字書体に揃える。 */
+.sales-page .sales-result strong,.sales-page .growth-labels b,.sales-page .yen-amount{font-family:Arial,"Yu Gothic",Meiryo,sans-serif;font-style:normal;font-variant-numeric:tabular-nums;font-weight:700;letter-spacing:.01em}
+.sales-page .yen-unit,.sales-page .sales-result small{font-family:"Yu Gothic",Meiryo,sans-serif;font-style:normal}
+.sales-page .yen-amount{white-space:nowrap}
+.sales-faq{margin:24px 0 0;text-align:center}
+.sales-faq>div{padding:22px 0;border-bottom:1px solid #bda26455}
+.sales-faq dt{font-size:18px;line-height:1.8;font-weight:700;color:#f5d78f;margin-bottom:10px}
+.sales-faq dd{font-size:16px;line-height:1.9;margin:0}
+@media(max-width:480px){.sales-faq dt{font-size:17px}.sales-faq dd{font-size:15px}}
+.sales-page .method-advantages{background:#101b22;color:#f8f3e7;border:1px solid #b6965070;padding:30px 20px}
+.method-columns{display:grid;grid-template-columns:1fr 1fr}
+.method-columns>div{padding:0 12px;min-width:0}
+.method-columns>div+div{border-left:1px solid #b6965070}
+.sales-page .method-columns h3{font-size:34px;color:#ffe08a;margin:0 0 14px;line-height:1.4}
+.method-columns strong{display:block;font-size:18px;line-height:1.7}
+.method-columns p{font-size:15px;line-height:1.9;margin:12px 0 0}
+.method-advantages figcaption{border-top:1px solid #b6965070;margin-top:24px;padding-top:18px;font-size:15px;line-height:1.8;color:#e2cb99}
+.sales-page .consultation-comparison{padding:0;background:#101b22;color:#f8f3e7;border:1px solid #b6965070}
+.consultation-comparison table{width:100%;table-layout:fixed;border-collapse:collapse;text-align:center}
+.consultation-comparison th{font-size:18px;line-height:1.8;padding:17px 16px;background:#19222a;color:#e2cb99}
+.consultation-comparison th+th{background:#352c19;color:#ffe08a}
+.consultation-comparison td{padding:20px 18px;font-size:16px;line-height:1.9;vertical-align:middle;border-top:1px solid #b6965040;overflow-wrap:anywhere}
+.consultation-comparison td+td,.consultation-comparison th+th{border-left:1px solid #b6965070}
+.consultation-comparison td+td{color:#fff1cf}
+@media(max-width:480px){.sales-page .method-advantages{padding:24px 10px}.method-columns>div{padding:0 7px}.sales-page .method-columns h3{font-size:27px}.method-columns strong{font-size:15px}.method-columns p{font-size:13px;line-height:1.85}.method-columns p br{display:none}.method-advantages figcaption{font-size:13px;margin-top:18px;padding-top:14px}.consultation-comparison th{font-size:15px;padding:14px 9px}.consultation-comparison td{font-size:14px;padding:15px 10px;line-height:1.85}}
+
+/* 読者の未来を見せる実写真。文脈ごとに大きく置き、写真日記の一覧にしない。 */
+.benefit-scene{margin-top:34px}
+.sales-page .benefit-scene h3{font:700 27px/1.7 "Yu Mincho",serif;color:#ffe08a;margin:32px 0 21px;text-align:center;text-wrap:balance}
+.benefit-photos{margin:28px 0 0;display:grid;gap:28px;text-align:center}
+.benefit-photo{margin:0;min-width:0}
+.benefit-photo img{display:block;width:100%;height:auto;object-fit:cover;background:#10141b}
+.benefit-photo.photo-panorama img{aspect-ratio:16/9}
+.benefit-photo.photo-feature img{aspect-ratio:4/3}
+.benefit-photo.photo-square img{aspect-ratio:1}
+.benefit-photo figcaption{font:700 21px/1.7 "Yu Mincho",serif;color:#f8e4b5;margin:17px 0 0;text-wrap:balance}
+.benefit-photos.layout-stories{gap:35px}
+.benefit-photos.layout-pair{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.benefit-photos.layout-pair figcaption{font-size:17px;margin-top:13px}
+.benefit-scene>.sales-copy:last-child{margin-top:30px}
+#lifestyle .benefit-scene{margin-top:0}
+#lifestyle .benefit-photos{margin-top:29px}
+@media(max-width:700px){.benefit-scene{margin-top:27px}.sales-page .benefit-scene h3{font-size:23px;margin:27px 0 19px}.benefit-photos{margin-top:24px;gap:25px}.benefit-photo figcaption{font-size:18px;margin-top:13px}.benefit-photos.layout-stories{gap:29px}.benefit-photos.layout-pair{gap:10px}.benefit-photos.layout-pair figcaption{font-size:14px;margin-top:11px}.benefit-scene>.sales-copy:last-child{margin-top:25px}}
+@media(max-width:359px){.sales-page .benefit-scene h3{font-size:21px}.benefit-photo figcaption{font-size:16px}.benefit-photos.layout-pair figcaption{font-size:13px}}
+
+/* 写真を増やす箇所は、主役1枚と続く2枚を組み合わせる */
+.benefit-photos.layout-mosaic{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 14px}
+.benefit-photos.layout-mosaic .benefit-photo:first-child{grid-column:1/-1}
+.benefit-photos.layout-mosaic .benefit-photo:not(:first-child) img{aspect-ratio:1}
+.benefit-photos.layout-mosaic .benefit-photo:not(:first-child) figcaption{font-size:17px;margin-top:13px}
+.benefit-photos.layout-pair .benefit-photo img{aspect-ratio:1}
+@media(max-width:700px){.benefit-photos.layout-mosaic{gap:21px 10px}.benefit-photos.layout-mosaic .benefit-photo:not(:first-child) figcaption{font-size:14px;margin-top:11px}}
+@media(max-width:359px){.benefit-photos.layout-mosaic .benefit-photo:not(:first-child) figcaption{font-size:13px}}
+
+/* 写真は冒頭・開催理由・申込み前へ集約し、中盤の説明を通す。 */
+.benefit-photos.layout-quad{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.benefit-photos.layout-quad .benefit-photo img{aspect-ratio:3/2}
+.benefit-photos.layout-collection{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.benefit-photos.layout-collection .benefit-photo img{aspect-ratio:4/3}
+.benefit-photos.layout-collection .benefit-photo:first-child{grid-column:1/-1}
+.benefit-photos.layout-collection .benefit-photo:first-child img{aspect-ratio:16/9}
+@media(max-width:700px){.benefit-photos.layout-quad{gap:8px}.benefit-photos.layout-collection{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}}
+
+@font-face{font-family:"LP Sans";src:url("assets/fonts/NotoSansJP-LP.woff2?v=line-more-v26") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+/* 本文・見出し・図解を同じ書体と色の体系に揃える。企画名は既存のロゴ表現。 */
+.sales-page{--lp-font:"LP Sans","Yu Gothic",Meiryo,sans-serif;--lp-panel:#101c28;--lp-line:#b6965066;--lp-gold:#f1d28a}
+.sales-page .sales-letter,.sales-page .sales-section h2,.sales-page .sales-section h3,.sales-page .sales-diagram,.sales-page .sales-diagram h3,.sales-page .sales-diagram strong,.sales-page .benefit-photo figcaption{font-family:var(--lp-font)}
+.sales-page .sales-section h2{font-weight:800;letter-spacing:0;line-height:1.6}
+.sales-page .sales-copy{font-weight:500}
+.sales-page .sales-diagram{background:var(--lp-panel);color:#f5f0e5;border-color:var(--lp-line)}
+.sales-page .growth-context,.sales-page .growth-context strong,.sales-page .growth-labels span,.sales-page .growth-labels b{color:#efdaa6}
+.sales-page .cause-diagram{background:none;border:0}
+.sales-page .cause-side{background:#111e2b;border-color:var(--lp-line)}
+.sales-page .cause-side.connected{background:#25241d;border-color:#b99d5a}
+.sales-page .cause-side>p{color:#e0d5bf}
+.sales-page .connected-steps li{background:#333227;color:#fff4d1}
+.sales-page .connected-steps li>span{background:#b79b58;color:#101820;font-family:var(--lp-font)}
+.sales-page .consultation-comparison th,.sales-page .consultation-comparison td{font-family:var(--lp-font)}
+.lp-detail{box-sizing:border-box;margin:30px 0 0;padding:28px;background:var(--lp-panel);border:1px solid var(--lp-line);text-align:left;color:#f7f3e9;font-family:var(--lp-font)}
+.lp-detail *{box-sizing:border-box}
+.lp-detail .object{width:58px;height:58px;flex:none;padding:8px;background:#eee4cb;border-radius:50%}
+.lp-detail figcaption{font-size:17px;line-height:1.7;font-weight:700;color:var(--lp-gold);margin:0 0 22px;text-align:center}
+.sales-page .lp-detail h3{font-family:var(--lp-font);font-size:20px;line-height:1.65;color:var(--lp-gold);margin:0 0 10px}
+.lp-detail p{font-size:15px;line-height:1.9;margin:0;color:#dedbd1}
+.lp-detail p strong{color:#fff5d5;font-weight:700}
+.fit-map{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;padding-inline:18px;text-align:center}
+.fit-map>div{position:relative;min-width:0}
+.fit-map>div+div:before{content:"→";position:absolute;top:22px;left:-18px;color:var(--lp-gold);font-size:20px}
+.fit-map .object{display:block;margin:0 auto 16px}
+.fit-map strong{display:block;font-size:17px;line-height:1.7;color:var(--lp-gold)}
+.fit-map span{display:block;font-size:13px;line-height:1.8;margin-top:6px;color:#dfdbcf}
+.concrete-concerns{padding-block:6px}
+.concrete-concerns>div{display:flex;align-items:center;gap:20px;padding:23px 0}
+.concrete-concerns>div+div{border-top:1px solid var(--lp-line)}
+.audience-map{padding:0;display:grid;grid-template-columns:1fr 1fr}
+.audience-map>div{padding:26px 20px}
+.audience-map>div+div{border-left:1px solid var(--lp-line);background:#29271d}
+.audience-map strong{display:block;font-size:15px;line-height:1.8;margin-top:15px;color:#ffeab2}
+.workbench-window{border:1px solid #a3b3bc70;background:#eaf0f1;color:#172b38;padding:22px}
+.window-title{display:flex;gap:11px;align-items:center;font-size:17px;margin-bottom:19px}
+.window-title .object{width:40px;height:40px;background:#173342}
+.workbench-window dl{margin:0}
+.workbench-window dl>div{border-top:1px solid #c4d0d4;padding:12px 0}
+.workbench-window dt{font-size:12px;font-weight:700;color:#5a707b;margin-bottom:5px}
+.workbench-window dd{font-size:15px;line-height:1.8;margin:0;font-weight:600}
+.prompt-command{margin:16px 0 18px;background:#d5e3d7;border-left:3px solid #617e69;padding:14px;font-size:15px;line-height:1.8;font-weight:700}
+.draft-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.draft-options>div{padding:12px 9px;background:#fff;border:1px solid #c6d1d5;min-width:0}
+.draft-options b{display:block;font-size:20px;color:#607784;margin-bottom:5px}
+.draft-options span{font-size:13px;line-height:1.7;display:block}
+.human-choice{display:flex;gap:16px;align-items:center;padding:22px 0 0}
+.human-choice strong{display:block;font-size:20px;line-height:1.7;color:#f5d78f}
+.human-choice span{display:block;font-size:14px;line-height:1.8;margin-top:5px}
+.lp-detail .detail-takeaway{border-top:1px solid var(--lp-line);padding-top:17px;margin-top:22px;color:#f3d894;text-align:center;font-size:15px;font-weight:700}
+.example-start{display:flex;align-items:center;gap:16px}
+.example-start strong{font-size:17px;line-height:1.8}
+.example-start p{margin-top:5px;font-size:14px}
+.example-questions{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;margin:23px 0}
+.example-questions span{padding:8px 11px;border:1px solid #927d4a;font-size:13px;color:#f3dca7;background:#29291f}
+.consult-note{position:relative;background:#f3efdf;color:#203643;padding:25px 22px;border-left:4px solid #b59853}
+.sales-page .consult-note h3{color:#293d45;border-bottom:2px solid #c3b58a;padding-bottom:13px;margin-bottom:5px;font-size:20px}
+.consult-note dl{margin:0}
+.consult-note dl>div{padding:14px 0;border-bottom:1px solid #d4ccb3}
+.consult-note dl>div:last-child{border-bottom:0;padding-bottom:0}
+.consult-note dt{font-size:13px;font-weight:700;color:#7a6740}
+.consult-note dd{font-size:15px;font-weight:600;line-height:1.85;margin:5px 0 0}
+.action-path{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;padding-inline:18px;text-align:center}
+.action-path>div{position:relative;min-width:0}
+.action-path>div>span{display:block;color:#cfb36e;font-size:13px;margin-bottom:10px}
+.action-path .object{display:block;margin:0 auto 13px;width:48px;height:48px}
+.action-path strong{display:block;font-size:15px;line-height:1.8;color:#f6df9c}
+.action-path>div+div:before{content:"→";position:absolute;top:42px;left:-17px;color:#cfb36e}
+.line-shot-gallery{gap:16px;align-items:start}
+.line-shot{border:1px solid #ffffff25;box-shadow:0 8px 26px #0003;background:#9aafb9}
+.line-shot img{width:100%;height:auto}
+.line-shot-gallery>.line-shot:last-child:nth-child(odd){width:calc((100% - 16px)/2)}
+.voice-image-dialog{max-width:580px;background:#10202c;border-color:#d4b56b;color:#faf6eb}
+.voice-image-scroll{background:#9aafb9}
+.voice-image-scroll img{max-width:520px}
+.voice-source-note{font-family:var(--lp-font);color:#d8c9a5}
+@media(max-width:700px){.lp-detail{padding:23px 17px;margin-top:26px}.fit-map,.action-path{padding-inline:12px;gap:12px}.fit-map strong{font-size:14px}.fit-map span{font-size:12px}.fit-map .object{width:46px;height:46px;padding:7px}.fit-map>div+div:before{left:-14px;top:17px;font-size:17px}.concrete-concerns{padding-block:2px}.concrete-concerns>div{gap:12px;padding:20px 0}.concrete-concerns .object{width:43px;height:43px;padding:6px}.sales-page .lp-detail h3{font-size:17px}.lp-detail p{font-size:14px}.audience-map{padding:0}.audience-map>div{padding:22px 16px}.workbench-window{padding:17px 13px}.workbench-window dd,.prompt-command{font-size:14px}.draft-options{gap:6px}.draft-options>div{padding:10px 7px}.draft-options span{font-size:12px}.human-choice{gap:12px}.human-choice strong{font-size:18px}.human-choice span{font-size:13px}.human-choice .object{width:44px;height:44px;padding:6px}.example-start{gap:11px}.example-start .object{width:45px;height:45px;padding:6px}.example-start strong{font-size:15px}.example-start p{font-size:13px}.example-questions span{font-size:12px;padding:7px 9px}.consult-note{padding:20px 15px}.consult-note dd{font-size:14px}.lp-detail .detail-takeaway{font-size:13px}.action-path strong{font-size:13px}.action-path .object{width:41px;height:41px}.line-shot-gallery{gap:13px}}
+@media(max-width:480px){.audience-map{grid-template-columns:1fr}.audience-map>div+div{border-left:0;border-top:1px solid var(--lp-line)}.line-shot-gallery{max-width:350px}.line-shot-gallery>.line-shot:last-child:nth-child(odd){width:100%}.line-shot{box-shadow:0 4px 14px #0002}}
+@media(max-width:359px){.fit-map{grid-template-columns:1fr;text-align:left;gap:16px;padding:20px}.fit-map>div{display:grid;grid-template-columns:46px 1fr;gap:0 13px;align-items:center}.fit-map .object{grid-row:1/3;margin:0}.fit-map strong{font-size:15px}.fit-map span{margin:2px 0 0}.fit-map>div+div:before{display:none}.concrete-concerns .object{display:none}.draft-options{grid-template-columns:1fr}.draft-options>div{display:flex;gap:10px;align-items:center}.draft-options b{font-size:15px;margin:0}.draft-options span{font-size:13px}.action-path strong{font-size:12px}}
+
+.sales-page .sales-result strong,.sales-page .growth-labels b,.sales-page .yen-amount,.sales-page .yen-unit,.sales-page .sales-result small{font-family:var(--lp-font);font-variant-numeric:tabular-nums}
+.line-shot-gallery{display:block;columns:2;column-gap:16px}
+.line-shot-gallery>.line-shot,.line-shot-gallery>.line-shot:last-child:nth-child(odd){display:inline-block;vertical-align:top;width:100%;margin:0 0 16px;break-inside:avoid}
+@media(max-width:480px){.line-shot-gallery{columns:1}.line-shot-gallery>.line-shot,.line-shot-gallery>.line-shot:last-child:nth-child(odd){margin-bottom:13px}}
+
+.sales-page .sales-letter svg text{font-family:var(--lp-font)}
+
+/* 対象者は記号と明暗の両方で区別。暗い側も文字の可読性は残す。 */
+.audience-map>.audience-excluded{background:#131b24;color:#aeb7bd}
+.audience-map>.audience-invited{background:#f3d996;color:#212d36;border-left-color:#bda266}
+.audience-symbol{display:block;font-size:44px;font-weight:700;line-height:1.1;margin-bottom:15px}
+.audience-excluded .audience-symbol{color:#919da8}
+.sales-page .audience-excluded h3,.audience-excluded strong{color:#b6bec5}
+.audience-excluded p{color:#aeb7bd}
+.sales-page .audience-invited h3,.audience-invited strong,.audience-invited p{color:#26323b}
+.audience-invited strong{border-top:1px solid #9e80464d;padding-top:14px}
+
+/* 食材→献立案→調理。文章を読まなくても工程を追える挿絵。 */
+.cooking-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));background:#f5eedc;color:#203b49;padding:17px 10px 20px;gap:16px}
+.cooking-steps>div{position:relative;min-width:0;text-align:center}
+.cooking-steps>div+div:before{content:"→";position:absolute;top:68px;left:-20px;color:#9d7839;font-size:24px;font-weight:700}
+.story-art{width:100%;height:auto;display:block;max-width:210px;margin:0 auto 10px}
+.sales-page .cooking-caption h3{font-size:16px;color:#233b46;margin:0 0 9px;line-height:1.65}
+.cooking-caption p{font-size:13px;line-height:1.9;color:#334c59}
+.cooking-bridge{padding-top:23px;text-align:center}
+.cooking-bridge>strong{display:block;color:#f3d894;font-size:18px;margin-bottom:12px;line-height:1.7}
+.cooking-bridge p{font-size:15px;line-height:1.9}
+
+/* 人と会話を主役にし、相談から始め方へ進む場面を見せる。 */
+.conversation-example{padding-inline:25px}
+.conversation-row{display:flex;align-items:center;gap:17px;margin-bottom:21px}
+.conversation-person{display:block;width:88px;height:auto;flex:none;align-self:flex-end}
+.conversation-bubble{position:relative;background:#e7edf0;color:#213b4b;padding:17px 20px;border-radius:13px;max-width:calc(100% - 105px)}
+.conversation-bubble:before{content:"";position:absolute;left:-11px;bottom:28px;border-top:8px solid transparent;border-bottom:8px solid transparent;border-right:12px solid #e7edf0}
+.conversation-bubble>span{display:block;font-size:12px;line-height:1.5;color:#597282;font-weight:700;margin-bottom:7px}
+.conversation-bubble p{font-size:15px;line-height:1.9;color:#233b49}
+.conversation-bubble p strong{color:#213a47;font-weight:800}
+.conversation-row.answer{flex-direction:row-reverse}
+.answer .conversation-bubble{background:#f3dfac}
+.answer .conversation-bubble:before{left:auto;right:-11px;border-right:0;border-left:12px solid #f3dfac}
+.conversation-plan{border-top:1px solid var(--lp-line);padding-top:22px;margin-top:28px;text-align:center}
+.sales-page .conversation-plan h3{font-size:18px;margin-bottom:17px}
+.conversation-plan>div{display:flex;justify-content:center;flex-wrap:wrap;gap:8px}
+.conversation-plan>div span{padding:9px 12px;background:#2d3028;color:#f5e2b1;font-size:13px;line-height:1.6}
+.conversation-plan p{margin-top:20px;font-size:15px}
+.conversation-plan p strong{font-size:18px;color:#f3d894}
+@media(max-width:700px){
+ .cooking-steps{grid-template-columns:1fr;padding:10px 17px;gap:0}
+ .cooking-steps>div{display:flex;align-items:center;gap:12px;text-align:left;padding:13px 0}
+ .cooking-steps>div+div{border-top:1px solid #c4b78e}
+ .cooking-steps>div+div:before{top:-12px;left:38px;font-size:20px;content:"↓";background:#f5eedc;padding:0 5px;line-height:1}
+ .story-art{width:105px;max-width:40%;flex:none;margin:0}
+ .sales-page .cooking-caption h3{font-size:16px;margin-bottom:7px}
+ .cooking-caption p{font-size:13px}
+ .cooking-bridge>strong{font-size:17px}
+ .cooking-bridge p{font-size:14px}
+ .conversation-example{padding-inline:15px}
+ .conversation-row{gap:12px;margin-bottom:18px}
+ .conversation-person{width:66px}
+ .conversation-bubble{padding:13px 14px;max-width:calc(100% - 78px)}
+ .conversation-bubble p{font-size:14px;line-height:1.85}
+ .conversation-bubble p br{display:none}
+ .sales-page .conversation-plan h3{font-size:17px}
+ .conversation-plan p strong{font-size:16px}
+}
+@media(max-width:480px){
+ .audience-map>div{position:relative;padding:24px 18px 24px 65px}
+ .audience-symbol{position:absolute;left:18px;top:25px;font-size:31px;margin:0}
+ .sales-page .audience-map h3{font-size:18px}
+}
+@media(max-width:359px){
+ .cooking-steps{padding-inline:11px}
+ .cooking-steps>div{gap:7px}
+ .story-art{width:78px;max-width:34%}
+ .cooking-steps>div+div:before{left:25px}
+ .sales-page .cooking-caption h3{font-size:15px}
+ .cooking-caption p{font-size:12px}
+ .conversation-person{width:50px}
+ .conversation-row{gap:10px}
+ .conversation-bubble{max-width:calc(100% - 60px);padding:12px}
+ .conversation-bubble p{font-size:13px}
+ .conversation-plan>div span{font-size:12px;padding:8px 9px}
+}
+/* v17: 本人提供の作業映像を、冒頭のフックと中盤の説明に使う。 */
+.sales-hero:has(.automation-film){padding:34px 24px 38px}
+.sales-hero:has(.automation-film) .sales-proof{margin:0 0 18px}
+.automation-hook{font:750 clamp(24px,3.2vw,30px)/1.5 var(--lp-font);letter-spacing:.03em;color:#fff8e7;margin:26px 0 21px}
+.automation-film{width:100%;max-width:800px;margin:30px auto 0;text-align:center}
+.automation-film video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#080d11;border:1px solid #b79b58;border-radius:6px;box-shadow:0 12px 40px #0005}
+.automation-film figcaption{font:500 14px/1.8 var(--lp-font);color:#ddc79b;margin-top:10px}
+.automation-film.is-hero{max-width:620px;margin:0 auto}
+.automation-film.is-hero video{box-shadow:0 0 36px #b58c2b24,0 12px 32px #0008}
+.automation-film.is-hero figcaption{color:#e7d7b4;font-size:16px;max-width:570px;margin:10px auto 0}
+.sales-hero:has(.automation-film) .sales-sub{margin:15px 0 0}
+.sales-hero:has(.automation-film) h1{font-size:clamp(48px,6.4vw,80px);margin:14px 0 0;line-height:1.22}
+.sales-hero:has(.automation-film) h1 span{margin-top:7px}
+@media(max-width:700px){
+ .sales-hero:has(.automation-film){padding:28px 18px 31px}
+ .sales-hero:has(.automation-film) .sales-proof{font-size:19px;line-height:1.8;margin-bottom:16px}
+ .automation-hook{font-size:24px;line-height:1.5;margin:23px 0 17px;letter-spacing:.01em}
+ .automation-film{margin-top:24px}
+ .automation-film figcaption{font-size:12px;margin-top:8px}
+ .automation-film.is-hero{margin-bottom:0}
+ .sales-hero:has(.automation-film) .sales-sub{font-size:16px;margin-top:17px}
+ .sales-hero:has(.automation-film) h1{font-size:51px;margin-top:14px}
+ .sales-hero:has(.automation-film) h1 span{font-size:27px;line-height:1.5}
+}
+@media(max-width:359px){
+ .automation-hook{font-size:20px}
+ .sales-hero:has(.automation-film) .sales-proof{font-size:17px}
+ .sales-hero:has(.automation-film) .sales-sub{font-size:14px}
+ .sales-hero:has(.automation-film) h1{font-size:46px}
+ .sales-hero:has(.automation-film) h1 span{font-size:24px}
+}
+
+@font-face{font-family:"LP Display";src:url("assets/fonts/LaunchMincho-v23.woff2?v=line-more-v26") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+/* バナーと同じ黒・深紅・鏡面の金。本文の読みやすさは従来のゴシックで保つ。 */
+body.sales-page{background:#020203;--lp-panel:#15100f;--lp-line:#a8884466;--lp-gold:#ffe39a;--lp-display:"LP Display","Yu Mincho",serif}
+.sales-page .sales-hero,.sales-page .sales-hero:has(.automation-film){padding:0;background:radial-gradient(ellipse at 50% 65%,#320207aa,transparent 65%),#020203;overflow:hidden}
+.banner-title-art{position:relative;aspect-ratio:1024/660;max-width:1024px;margin:0 auto;overflow:hidden;background:#020203}
+.banner-title-art img{display:block;width:100%;height:auto;max-width:none}
+.sales-page .sales-hero h1.banner-title-accessible{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.automation-opening{max-width:800px;margin:0 auto;padding:25px 25px 38px;border-top:1px solid #b0863b55}
+.automation-opening .automation-hook{font-family:var(--lp-display);font-size:clamp(21px,3vw,30px);font-weight:800;color:#fff1be;margin:0 0 20px;line-height:1.7;text-shadow:0 0 18px #e8b94745}
+.automation-opening .automation-film{margin:0 auto;max-width:700px}
+.automation-opening .automation-film video{border-color:#b99047;box-shadow:0 0 25px #b6611825}
+.automation-opening .automation-film figcaption{color:#f3dfa7;font-size:15px}
+.sales-page .sales-letter{background:#070606;box-shadow:0 0 0 1px #bb8d3e35;max-width:880px}
+.sales-page .sales-section{border-color:#bd944b44;background:linear-gradient(135deg,#0e0a08,#060606 65%)}
+.sales-page .sales-section.dark{background:radial-gradient(ellipse at 0 0,#3e071140,transparent 60%),#080506}
+.sales-page .sales-section.gold{background:radial-gradient(ellipse at 100% 0,#69421724,transparent 55%),#090706}
+.sales-page .sales-section h2{font-family:var(--lp-display);font-weight:900;color:#ffdf85;text-shadow:0 0 18px #ba7d2730;letter-spacing:.015em}
+.sales-page .sales-section h3{font-family:var(--lp-display);font-weight:800;color:#ffe3a0}
+.sales-page .sales-section.owner-spotlight{position:relative;padding-top:54px;background:linear-gradient(90deg,#030303e8,#060303fa 27%,#060303fa 73%,#030303e8),url("assets/C背景.png") center/cover;border-top:2px solid #c09842;border-bottom:1px solid #bc9048}
+.owner-spotlight:before{content:"";position:absolute;left:12%;right:12%;top:-2px;height:2px;background:linear-gradient(90deg,transparent,#ffd967,#fff9c9,#ffd967,transparent);box-shadow:0 0 15px #ffad26}
+.sales-page .sales-section h2.owner-claim{margin:0 auto 32px;line-height:1.2;letter-spacing:0;max-width:100%;text-wrap:initial}
+.owner-claim-context{display:block;font-size:clamp(25px,4.5vw,42px);color:#fff7dd;line-height:1.65;text-shadow:0 2px 2px #000,0 0 16px #c4964055}
+.owner-claim-period{display:block;margin-top:11px;font-size:clamp(26px,5.5vw,47px);line-height:1.45;color:#ffe88c}
+.owner-claim-period b{font-size:1.38em;font-weight:900;margin-right:.05em}
+.owner-claim-amount{display:block;white-space:nowrap;margin:3px auto 0;font-size:clamp(48px,13.4vw,110px);font-weight:900;font-variant-numeric:lining-nums;letter-spacing:-.035em;line-height:1.45;background:linear-gradient(180deg,#fffde0 8%,#fff7a9 25%,#f9c72d 51%,#ffe992 69%,#bc7214 92%);-webkit-background-clip:text;background-clip:text;color:#ffe58c;-webkit-text-fill-color:transparent;filter:drop-shadow(0 2px 1px #000) drop-shadow(0 0 13px #edb63145)}
+.owner-claim-amount>span{font-size:.32em;margin-left:.12em;letter-spacing:0}
+.sales-page .owner-spotlight .sales-copy{max-width:36em}
+.sales-page .owner-income{padding:1px;border:1px solid #ba914b;box-shadow:0 0 25px #c18c2920;margin-top:36px}
+.sales-page .sales-result{border-top:2px solid #bc9652;border-bottom:1px solid #bc9652;background:radial-gradient(ellipse,#6a42171c,transparent 75%);padding:28px 0}
+.sales-page .sales-result strong{font-family:var(--lp-display);font-weight:900;letter-spacing:-.035em;color:#ffe49a;text-shadow:0 0 20px #e7aa3745;font-size:clamp(52px,11vw,100px)}
+.sales-page .sales-result small{font-family:var(--lp-display);font-weight:800;font-size:.3em;letter-spacing:0}
+.sales-page .sales-cta button{background:linear-gradient(180deg,#ffefab,#e6be62 53%,#b5802b);border:1px solid #ffe6a2;box-shadow:0 0 25px #b55a2638;color:#1b0805}
+.sales-page .cause-side{background:#17110f;border-color:#987d48}.sales-page .cause-side.connected{background:#262015;border-color:#cba450}.sales-page .connected-steps li{background:#35291c}
+.sales-page .sales-concerns li{background:#1d1410;border-color:#d5ad60}
+.sales-page .lp-detail .object{background:#f6e5ba}
+.sales-page .lp-detail,.sales-page .sales-diagram{border-color:#a58a4c66}
+@media(max-width:700px){
+ .automation-opening{padding:16px 18px 26px}
+ .automation-opening .automation-hook{font-size:22px;margin:0 0 14px}
+ .automation-opening .automation-film figcaption{font-size:12px;line-height:1.95;margin-top:11px}
+ .sales-page .sales-section h2{font-size:27px;line-height:1.65}
+ .sales-page .sales-section.owner-spotlight{padding:36px 20px 38px}
+ .sales-page .sales-section h2.owner-claim{margin-bottom:28px;line-height:1.2}
+ .owner-claim-context{font-size:28px}.owner-claim-period{font-size:31px;margin-top:10px}
+ .owner-claim-amount{font-size:clamp(48px,13.4vw,86px);line-height:1.45}
+ .sales-page .sales-result strong{font-size:clamp(50px,12.8vw,80px)}
+}
+@media(max-width:359px){
+ .automation-opening{padding:14px 15px 24px}.automation-opening .automation-hook{font-size:20px}
+ .sales-page .sales-section h2{font-size:24px}
+ .sales-page .sales-section.owner-spotlight{padding:31px 17px}
+ .owner-claim-context{font-size:25px}.owner-claim-period{font-size:28px}
+ .owner-claim-amount{font-size:46px}
+ .sales-page .sales-result strong{font-size:48px}
+}
+
+/* 濃い文字を明るい面へ、明るい文字を暗い面へ。バナーの文字組みは維持。 */
+.banner-title-art::after{content:"";position:absolute;z-index:1;left:0;top:0;width:22%;height:21.2%;background:#020203;pointer-events:none}
+.automation-opening .automation-film.is-hero figcaption{font-size:19px;font-weight:650;line-height:1.9;max-width:670px;color:#fff1ce;margin-top:17px}
+.owner-claim-amount>span{font-size:.46em;vertical-align:baseline;margin-left:.1em}
+.sales-page .sales-section .audience-invited h3,.sales-page .sales-section .audience-invited p,.sales-page .sales-section .audience-invited strong,.sales-page .sales-section .audience-invited .audience-symbol{color:#21252b;text-shadow:none}
+.sales-page .sales-section .audience-excluded h3{color:#bac2ca;text-shadow:none}
+.sales-page .sales-section .consult-note h3,.sales-page .sales-section .cooking-caption h3{color:#23343d;text-shadow:none}
+@media(max-width:700px){
+ .automation-opening .automation-film.is-hero figcaption{font-size:18px;line-height:1.95;font-weight:650;margin-top:15px}
+ .owner-claim-amount{font-size:clamp(46px,12.8vw,82px)}
+}
+@media(max-width:359px){
+ .automation-opening .automation-film.is-hero figcaption{font-size:17px;line-height:1.9}
+ .owner-claim-amount{font-size:44px}
+}
+
+/* Supplied mobile screenshots: preserve their original lettering and proportions. */
+.sales-page .participant-photos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:30px auto 24px;max-width:100%;align-items:start}
+.sales-page .participant-photos figure{margin:0;min-width:0;border:1px solid #d2b57070;background:#090b0e;overflow:hidden}
+.sales-page .participant-photos button{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
+.sales-page .participant-photos img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:50% 37%}
+.sales-page .participant-photos button:focus-visible{outline:3px solid #f9df91;outline-offset:-4px}
+.sales-page .line-shot-gallery{columns:2;column-gap:18px;max-width:none;margin:24px auto 0}
+.sales-page .line-shot-gallery>.line-shot{display:inline-block;width:100%;margin:0 0 18px;vertical-align:top;break-inside:avoid;border:1px solid #d2b57070;background:#272727;box-shadow:none}
+.sales-page .line-shot-gallery>.line-shot:last-child:nth-child(odd){width:100%;margin-inline:0}
+.sales-page .line-shot img{width:100%;height:auto;object-fit:contain}
+.sales-page .voice-image-dialog{max-width:850px;padding:14px;background:#11161c;border-color:#d2b570;color:#faf6eb}
+.sales-page .voice-image-scroll{background:#1d232a}
+.sales-page .voice-image-scroll img{width:var(--shot-width);max-width:none;height:auto;margin:0}
+.sales-page .voice-image-dialog.is-fit .voice-image-scroll img{width:100%;max-width:100%;height:auto;margin:0}
+@media(max-width:700px){
+ .sales-page .participant-photos{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:24px}
+ .sales-page .line-shot-gallery{columns:1;max-width:540px;margin-top:22px}
+ .sales-page .line-shot-gallery>.line-shot{margin-bottom:15px}
+ .sales-page .voice-image-dialog{padding:10px}
+}
