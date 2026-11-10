@@ -32,7 +32,7 @@ const note=(s,error=false)=>{status.textContent=s;status.classList.toggle('error
 const saved=store.get(key);if(saved?.fields){setValues(saved.fields);promptKind=Number.isInteger(saved.promptKind)?saved.promptKind:0;}
 const persist=()=>store.set(key,{fields:read(),promptKind});
 function update(){
- 
+
  if(kind==='week'){const total=Array.from({length:7},(_,i)=>num(value('min'+i))||0).reduce((a,b)=>a+b,0);form.querySelector('[data-week-total]').textContent=total+'分';}
  if(kind==='metrics'){
   const a=ratio('a'),b=ratio('b');const box=form.querySelector('.metrics-live');box.textContent='';
@@ -96,7 +96,7 @@ form.querySelector('[data-download]')?.addEventListener('click',()=>{if(!output.
  const rate=(a,b)=>a==null||b==null?'未入力':b===0?'算出しない（母数0）':(100*a/b).toFixed(2)+'%';
  const labels={Scene:'商品を使う人と場面',Facts:'商品の仕様と使える映像',Terms:'案件条件',Destination:'案内先'};
  function update(){
-  
+
   if(kind==='metrics'){
    const box=form.querySelector('[data-funnel-live]');box.replaceChildren(text('h3','クリックの先も、段階を分ける。'));
    const hasA=['Period','Views','Clicks','Occurred','ApprovedCount','Approved','Cost'].some(s=>get('a'+s)!=='');box.classList.toggle('single-period',!hasA);const row=(a,b,c)=>{const r=document.createElement('div');r.className='funnel-row';r.append(text('span',a));if(hasA)r.append(text('strong',b));r.append(text('strong',c));box.append(r)};
@@ -355,7 +355,7 @@ if(n==='06'){f.querySelector('[data-example]')?.addEventListener('click',()=>{fo
 if(n==='05'){
  const role=f.querySelector('[data-v43-role]'),speech=f.querySelector('[data-v43-speech]'),shot=f.querySelector('[data-v43-shot]'),preview=f.querySelector('[data-v43-preview]');
  const sync=()=>{speech.value=f.elements.namedItem('speech'+role.value).value;shot.value=f.elements.namedItem('shot'+role.value).value;};
- const render=()=>{preview.replaceChildren();for(let i=1;i<=4;i++){const row=document.createElement('div'),b=document.createElement('b'),p=document.createElement('p'),s=document.createElement('span');b.textContent=i+' '+['買い手の疑問','比較の根拠','選べる条件','最後の案内'][i-1];p.textContent=get('speech'+i)||'［話すセリフは未記入］';s.textContent='映すもの：'+(get('shot'+i)||'［未確認］');row.append(b,p,s);preview.append(row);}};
+  const render=()=>{preview.replaceChildren();for(let i=1;i<=4;i++){const row=document.createElement('div'),b=document.createElement('b'),p=document.createElement('p'),s=document.createElement('span');b.textContent=i+' '+['買い手の疑問','商品の特徴・根拠','選ぶ理由・使う場面','最後の案内'][i-1];p.textContent=get('speech'+i)||'［話すセリフは未記入］';s.textContent='映すもの：'+(get('shot'+i)||'［未確認］');row.append(b,p,s);preview.append(row);}};
  role.addEventListener('change',sync);speech.addEventListener('input',()=>{f.elements.namedItem('speech'+role.value).value=speech.value;f.dispatchEvent(new Event('input',{bubbles:true}));});shot.addEventListener('input',()=>{f.elements.namedItem('shot'+role.value).value=shot.value;f.dispatchEvent(new Event('input',{bubbles:true}));});f.addEventListener('input',render);
  for(const selector of ['[data-example]','[data-clear]'])f.querySelector(selector)?.addEventListener('click',()=>{sync();render();});sync();render();
 }
@@ -385,3 +385,35 @@ if(n==='10'){const raw=k=>get(k),num=k=>raw(k)===''?null:Number(raw(k)),rows=['�
 /* A checked AI answer is pasted by the reader. This form does not call an AI. */
 document.querySelectorAll('form[data-tool="scriptnote"]').forEach(f=>{const field=f.elements.namedItem('finalScript'),out=f.querySelector('[data-output]'),panel=f.querySelector('.output-panel'),status=f.querySelector('[data-tool-status]'),key='secret-bonus-v15-volume-'+f.dataset.volume;const note=t=>{status.textContent=t;};try{const saved=JSON.parse(localStorage.getItem(key)||'null');if(typeof saved?.fields?.finalScript==='string')field.value=saved.fields.finalScript;}catch{}
 const save=()=>{try{localStorage.setItem(key,JSON.stringify({fields:{finalScript:field.value}}));}catch{}};field.addEventListener('input',save);f.querySelector('[data-example]')?.addEventListener('click',()=>{field.value=window.BONUS_V32_EXAMPLES?.['08-final']?.finalScript||'';save();note('確認後の4行の練習例を入れました。');});f.querySelector('[data-clear]')?.addEventListener('click',()=>{field.value='';out.value='';panel.hidden=true;save();note('原稿欄を空にしました。');});f.addEventListener('submit',e=>{e.preventDefault();if(!field.value.trim()){panel.hidden=true;note('AIの返答を仕様と比べて直し、読むセリフをこの欄へ貼り付けてください。');return;}out.value=field.value;panel.hidden=false;save();note('入力した原稿を表示しました。AIの自動生成ではありません。');});f.querySelector('[data-copy]')?.addEventListener('click',async()=>{if(!out.value)return;try{await navigator.clipboard.writeText(out.value);note('紹介原稿をコピーしました。');}catch{out.focus();out.select();note('原稿を選択しました。コピーして使えます。');}});f.querySelector('[data-download]')?.addEventListener('click',()=>{if(!out.value)return;const url=URL.createObjectURL(new Blob(['\ufeff'+out.value],{type:'text/plain;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download='特典08_確認後の紹介原稿.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);note('紹介原稿のTXTを作りました。');});});
+
+/* V50: generated text belongs to the current inputs, including optional tools. */
+(()=>{'use strict';
+ document.querySelectorAll('form[data-tool], form[data-caption-tool]').forEach(form=>{
+  const output=form.querySelector('[data-output], [data-caption-output]');
+  const panel=form.querySelector('.output-panel, [data-caption-panel]');
+  if(!output||!panel)return;
+  const status=form.querySelector('[data-tool-status], [data-caption-status]');
+  const signature=()=>JSON.stringify({fields:[...form.querySelectorAll('input,textarea,select')].filter(e=>e!==output).map(e=>[e.name||e.id||e.dataset.v43Role||'',e.type==='checkbox'?e.checked:e.value]),prompt:form.querySelector('[data-prompt-kind][aria-pressed="true"]')?.dataset.promptKind});
+  let generatedFrom=null,needsRegeneration=false;
+  const invalidate=()=>{
+   if(!output.value&&panel.hidden&&!needsRegeneration)return;
+   output.value='';panel.hidden=true;generatedFrom=null;needsRegeneration=true;
+   const review=form.querySelector('[data-result-review]');if(review)review.hidden=true;
+   if(status){status.classList.remove('error');status.textContent='入力を変更しました。作成ボタンをもう一度押すと、変更後の内容をコピー・保存できます。';}
+  };
+  for(const event of ['input','change'])form.addEventListener(event,e=>{if(e.target!==output)invalidate();});
+  form.addEventListener('click',e=>{
+   const button=e.target.closest('button');if(!button)return;
+   if(button.matches('[data-example], [data-v41-example-b], [data-prompt-kind], [data-caption-example]'))invalidate();
+   if(button.matches('[data-clear], [data-caption-clear]'))needsRegeneration=false;
+  });
+  form.addEventListener('submit',()=>{generatedFrom=!panel.hidden&&output.value?signature():null;if(generatedFrom)needsRegeneration=false;});
+  form.addEventListener('click',e=>{
+   const button=e.target.closest('[data-copy], [data-download], [data-caption-copy], [data-caption-download]');
+   if(button&&(!generatedFrom||generatedFrom!==signature()||panel.hidden)){
+    e.preventDefault();e.stopImmediatePropagation();invalidate();
+    if(status)status.textContent='入力した内容を作成ボタンで表示してから、コピー・保存してください。';
+   }
+  },true);
+ });
+})();
